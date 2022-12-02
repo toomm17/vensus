@@ -1,29 +1,34 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import RouletteView from '@/views/RouletteView.vue'
-import PlinkoView from '@/views/PlinkoView.vue'
-import CrashView from '@/views/CrashView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import PlinkoView from '@/views/PlinkoView.vue';
+import CrashView from '@/views/CrashView.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Roulette',
-    component: RouletteView
-  },
-  {
-    path: '/plinko',
     name: 'Plinko',
-    component: PlinkoView
+    component: PlinkoView,
+    meta: {
+      title: 'Plinko',
+    },
   },
   {
     path: '/crash',
     name: 'Crash',
-    component: CrashView
-  }
-]
+    component: CrashView,
+    meta: {
+      title: 'Crash',
+    },
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});

@@ -1,0 +1,255 @@
+.site_theme_dark {
+  --btn-bg-color: #272727;
+}
+
+.site_theme_white {
+  --btn-bg-color: #e6e6e6;
+}
+
+.sidebar-area {
+  width: 35%;
+  background: var(--sidebar-color);
+  height: 100%;
+  border-bottom: 4px solid var(--border-color);
+}
+
+.sidebar-container {
+  width: 378px;
+  height: 545px;
+  margin-left: 53.5px;
+  margin-top: 40px;
+}
+
+.sidebar-row {
+  display: flex;
+}
+
+.green-text {
+  color: #38bb7f !important;
+}
+
+.yellow-text {
+  color: #ffcc4a !important;
+}
+
+.red-text {
+  color: #ff4900 !important;
+}
+
+.ping-info {
+  display: flex;
+  cursor: pointer;
+}
+
+.ping-logo {
+  width: 35.5px;
+  height: 35.5px;
+  margin-top: 5px;
+}
+
+.ping-info-content {
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+.ping-info__text {
+  color: #535353;
+  line-height: 26px;
+}
+
+.ping-info__ping {
+  margin-top: 0px;
+  line-height: 16px;
+}
+
+.buttons-area {
+  margin-left: 32px;
+  margin-top: 5px;
+  display: flex;
+}
+
+.buttons-area button {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--btn-bg-color);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.buttons-area button:hover {
+  background-color: #535353 !important;
+}
+
+.security-info-btn {
+  background-image: url('../images/security-icon.svg');
+}
+
+.help-info-btn {
+  background-image: url('../images/question-mark-icon.svg');
+}
+
+.security-img {
+  width: 20px;
+  height: 25px;
+}
+
+.help-info-btn {
+  margin-left: 22px;
+}
+
+.another-games-area {
+  margin-top: 28px;
+}
+
+.none-games__img {
+  width: 26px;
+  height: 13px;
+  margin-left: 167px;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.none-games__img:hover {
+  transform: translateY(+5px);
+}
+
+.show-games {
+  display: flex;
+  margin-top: 28px;
+  justify-content: space-between;
+}
+
+.game-card {
+  width: 175px;
+  height: 114px;
+  border: 4px solid #272727;
+  border-radius: 28px;
+  display: flex !important;
+  justify-content: center;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.game-card-name {
+  display: flex !important;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.game-card-dot {
+  width: 5.75px;
+  height: 5.75px;
+  background-color: #ff4900;
+  border-radius: 100%;
+  margin-top: 12px;
+  margin-right: 5.75px;
+}
+
+.game-name__text {
+  font-size: 17px;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.big-arrow-up {
+  margin-top: 15px;
+  margin-left: 175px;
+  width: 26px;
+  height: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+}
+
+.big-arrow-up:hover {
+  transform: translateY(-5px);
+}
+
+.betting-area {
+  margin-top: 50px;
+}
+
+.betting-area-title {
+  display: flex;
+}
+
+.title-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #ff4900;
+  margin-top: 21px;
+}
+
+.title__text {
+  font-size: 32px;
+  margin-left: 7px;
+}
+
+.betting-instruction__text {
+  margin-top: 15px;
+  font-size: 18px;
+  margin-left: 17px;
+}
+
+.amount-input {
+  width: 100%;
+  height: 67.2px;
+  margin-top: 15px;
+  background-color: #535353;
+  border-radius: 15.4px;
+  padding-left: 26.6px;
+  color: #949494;
+  font-size: 18px;
+}
+
+.betting-buttons-row {
+  margin-top: 10px;
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.betting-button {
+  width: 81.2px;
+  height: 49px;
+  background: #1b1b1b;
+  border: 4.2px solid #272727;
+  border-radius: 8.4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.betting-button:hover {
+  transform: translateY(-2px);
+}
+
+.accept-bet-button {
+  width: 193px;
+  height: 43px;
+  margin-top: 31px;
+  margin-left: 100px;
+  background: linear-gradient(135deg, #ff4900 0%, #ff6c36 100%);
+  border-radius: 24.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.accept-bet-button:hover {
+  transform: translateY(-3px);
+}
