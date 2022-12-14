@@ -1,24 +1,24 @@
-import { addressIsRegister } from '@/api/wallet';
+import { addressIsRegister, createWallet } from '@/api/wallet';
 
-export default class Metamask {
+export default class BnbMetamask {
   constructor() {
     this.name = 'Metamask';
     this.logo = require('@/assets/images/metamask-logo.png');
     this.downloadUrl = 'https://metamask.io/';
-    this.ethChainId = '0x1';
+    this.bnbChainId = `0x${Number(56).toString(16)}`;
   }
 
   swapChain(currentChainId) {
-    if (currentChainId != this.ethChainId) {
+    if (currentChainId != this.bnbChainId) {
       this.provider.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: this.ethChainId }],
+        params: [{ chainId: this.bnbChainId }],
       });
     }
   }
 }
 
-Metamask.prototype.detectProvider = function () {
+BnbMetamask.prototype.detectProvider = function () {
   const provider = window.ethereum;
   if (provider && provider.isMetaMask) {
     return provider;
@@ -47,24 +47,32 @@ const createSignMessage = function () {
   return `Authorize your wallet to play !\n\nYour nonce: ${generatedNonce}`;
 };
 
-const swapChain = async function (chainId) {
-  const ethChainId = '0x1';
+const swapChain = async function (provider, chainId) {
   return await provider.request({
     method: 'wallet_switchEthereumChain',
-    params: [{ chainId: ethChainId }],
+    params: [{ chainId: chainId }],
   });
 };
 
-Metamask.prototype.connectWallet = async function (provider, chain) {
+BnbMetamask.prototype.connectWallet = async function (provider, chain) {
   const accountAddress = await getAccountAddress(provider);
   const addrFromDb = await addressIsRegister(accountAddress, chain.name);
 
-  if (addrFromDb.wallet == '123') {
+  if (addrFromDb.wallet == null) {
     const currentChainId = await getCurrentChainId(provider);
 
-    if (currentChainId != this.ethChainId) {
-      await swapChain(this.ethChainId);
+    if (currentChainId != this.bnbChainId) {
+      const result = await swapChain(provider, this.bnbChainId);
+      console.log(result);
     }
+
+    const signMessage = createSignMessage();
+    await signWallet(provider, accountAddress, signMessage);
+
+    const createdWallet = await createWallet(accountAddress, chain);
+    
+    // JWT
+    localStorage.setItem('pwu', createWallet.jwt);
   } else {
     console.log('connect authorized wallet');
     // await signWallet()

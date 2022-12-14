@@ -12,7 +12,10 @@ export async function addressIsRegister(address, coin) {
   }
 }
 
-export async function createWallet(wallet) {
-  const response = await axios.post(WALLET_ENDPOINT, wallet);
+export async function createWallet(address, coin) {
+  console.log(coin, 'COIN');
+  const walletData = { address: address, coin: coin.name };
+  const endpoint = WALLET_ENDPOINT + 'create/';
+  const response = await axios.post(endpoint, walletData);
   return response.data;
 }

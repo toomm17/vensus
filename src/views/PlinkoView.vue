@@ -1,7 +1,7 @@
 <template>
   <div class="game-area">
     <div class="game-container">
-      <plinko-game />
+      <matter-plinko-game />
     </div>
   </div>
   <div class="sidebar-area">
@@ -13,11 +13,11 @@
 
 <script>
 import PlinkoSidebar from '@/components/plinko/PlinkoSidebar.vue';
-import PlinkoGame from '@/components/plinko/PlinkoGame.vue';
+import MatterPlinkoGame from '@/components/plinko/MatterPlinkoGame.vue';
 
 export default {
   components: {
-    PlinkoGame,
+    MatterPlinkoGame,
     PlinkoSidebar,
   },
 };
