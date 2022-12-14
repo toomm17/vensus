@@ -1,0 +1,57 @@
+.ghistory-container {
+  display: flex;
+  height: 66px;
+  align-items: center;
+}
+
+.game-history {
+  width: 167px;
+  height: 42.75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b1b1b;
+  border-radius: 64.128px;
+  color: #535353;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.game-result {
+  width: 167px;
+  height: 43px;
+  border-radius: 64.128px;
+  background: #1b1b1b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.profile-logo-letter {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #ff4900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  color: #922a00;
+  margin-left: 6px;
+}
+
+.wallet-address {
+  font-size: 13px;
+}
+
+.win-sum {
+  font-size: 13px;
+  color: #38bb7f;
+}
+
+.coin-logo__img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}

@@ -1,0 +1,99 @@
+.site_theme_dark {
+  --game-bg: #1b1b1b;
+  --border-color: #272727;
+  --sidebar-color: #000000;
+  --footer-color: #000000;
+}
+
+.site_theme_white {
+  --game-bg: #f2f2f2;
+  --border-color: #e6e6e6;
+  --sidebar-color: #ffffff;
+  --footer-color: #ffffff;
+}
+
+.content {
+  width: 100%;
+  height: 780px;
+  display: flex;
+  background-color: orange;
+}
+
+.game-area {
+  width: 65%;
+  height: 100%;
+  background: var(--game-bg);
+  border-right: 4px solid var(--border-color) !important;
+  border-bottom: 4px solid var(--border-color) !important;
+}
+
+.game-container {
+  width: 990px;
+  margin-left: auto;
+  margin-top: 75px;
+}
+
+.roulette-container {
+  margin-top: 80px;
+  margin-left: 80px;
+  height: 610px;
+  width: 809px;
+}
+
+.roulette-history {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.roulette-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 55.15px;
+  height: 55.15px;
+  border-radius: 7.04039px;
+  font-size: 16px;
+  margin-right: 2.85px;
+  color: white;
+}
+
+.roulette-number:last-child {
+  margin-right: 0;
+}
+
+.red {
+  background: #dd4c38 !important;
+}
+
+.green {
+  background: #38bb7f !important;
+}
+
+.gray {
+  background: #535353 !important;
+}
+
+.sidebar-area {
+  width: 35%;
+  background: var(--sidebar-color);
+  height: 100%;
+  border-bottom: 4px solid var(--border-color);
+}
+
+.sidebar-container {
+  width: 435px;
+  height: 100%;
+}
+
+.footer-ghistory {
+  width: 100%;
+  background: var(--footer-color);
+  height: 100%;
+}
+
+.ghistory-container {
+  width: 1425px;
+  height: 66px;
+}
