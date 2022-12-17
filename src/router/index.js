@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import PlinkoView from '@/views/PlinkoView.vue';
 import CrashView from '@/views/CrashView.vue';
+import Promocode from '@/components/promocode/Promocode';
 
 const routes = [
   {
@@ -17,6 +18,14 @@ const routes = [
     component: CrashView,
     meta: {
       title: 'Crash',
+    },
+  },
+  {
+    path: '',
+    name: 'Promocode',
+    component: Promocode,
+    meta: {
+      title: 'Vensus',
     },
   },
 ];

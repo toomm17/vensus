@@ -1,13 +1,14 @@
 <template>
-  <body :class="this.currentTheme">
-    <the-header @changeTheme="this.changeTheme" />
+  <!-- <body :class="this.currentTheme"> -->
+  <!-- <the-header @changeTheme="this.changeTheme" />
     <div class="content">
       <router-view />
     </div>
     <div class="footer-ghistory">
       <div class="ghistory-container"></div>
-    </div>
-  </body>
+    </div> -->
+  <promocode />
+  <!-- </body> -->
 </template>
 
 <style src="@/assets/css/reset.css"></style>
@@ -18,11 +19,13 @@
 <script>
 import TheHeader from '@/components/header/TheHeader.vue';
 import RouletteView from './views/RouletteView.vue';
+import Promocode from '@/components/promocode/Promocode.vue';
 
 export default {
   components: {
     TheHeader,
     RouletteView,
+    Promocode,
   },
 
   created() {
