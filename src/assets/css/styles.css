@@ -1,8 +1,7 @@
 body {
-  font-family: 'Poppins';
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  color: var(--text-color);
+  color: white;
+  font-family: 'CeraPro';
+  background: linear-gradient(180deg, #1b1b1b 42.62%, #0e0e0e 100%);
+  background: -moz-linear-gradient(180deg, #1b1b1b 100%, #0e0e0e 100%);
+  background: -webkit-linear-gradient(#1b1b1b 42.62%, #0e0e0e 100%);
 }
-

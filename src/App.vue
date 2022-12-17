@@ -1,14 +1,14 @@
 <template>
-  <!-- <body :class="this.currentTheme"> -->
-  <!-- <the-header @changeTheme="this.changeTheme" />
+  <body :class="this.currentTheme">
+    <!-- <the-header @changeTheme="this.changeTheme" />
     <div class="content">
       <router-view />
     </div>
     <div class="footer-ghistory">
       <div class="ghistory-container"></div>
     </div> -->
-  <promocode />
-  <!-- </body> -->
+    <promocode />
+  </body>
 </template>
 
 <style src="@/assets/css/reset.css"></style>
