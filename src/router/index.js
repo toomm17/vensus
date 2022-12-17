@@ -5,7 +5,7 @@ import Promocode from '@/components/promocode/Promocode';
 
 const routes = [
   {
-    path: '/',
+    path: '/plinko',
     name: 'Plinko',
     component: PlinkoView,
     meta: {
@@ -21,7 +21,7 @@ const routes = [
     },
   },
   {
-    path: '',
+    path: '/',
     name: 'Promocode',
     component: Promocode,
     meta: {

@@ -7,7 +7,7 @@
     <div class="footer-ghistory">
       <div class="ghistory-container"></div>
     </div> -->
-    <promocode />
+    <router-view />
   </body>
 </template>
 
