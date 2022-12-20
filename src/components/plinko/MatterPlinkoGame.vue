@@ -41,26 +41,26 @@ export default {
         let cols = 26;
 
         p5.preload = () => {
-          //   const x38imagePath = require('@/assets/images/x38plinko.png');
-          //   const x12imagePath = require('@/assets/images/x12plinko.png');
-          //   const x43imagePath = require('@/assets/images/x4.3plinko.png');
-          //   const x2imagePath = require('@/assets/images/x2.0plinko.png');
-          //   const x1imagePath = require('@/assets/images/x1.1plinko.png');
-          //   const x05imagePath = require('@/assets/images/x0.5plinko.png');
-          //   const x03imagePath = require('@/assets/images/x0.3plinko.png');
-          //   images.push(p5.loadImage(x38imagePath));
-          //   images.push(p5.loadImage(x12imagePath));
-          //   images.push(p5.loadImage(x43imagePath));
-          //   images.push(p5.loadImage(x2imagePath));
-          //   images.push(p5.loadImage(x1imagePath));
-          //   images.push(p5.loadImage(x05imagePath));
-          //   images.push(p5.loadImage(x03imagePath));
-          //   images.push(p5.loadImage(x05imagePath));
-          //   images.push(p5.loadImage(x1imagePath));
-          //   images.push(p5.loadImage(x2imagePath));
-          //   images.push(p5.loadImage(x43imagePath));
-          //   images.push(p5.loadImage(x12imagePath));
-          //   images.push(p5.loadImage(x38imagePath));
+          const x38imagePath = require('@/assets/images/x38plinko.png');
+          const x12imagePath = require('@/assets/images/x12plinko.png');
+          const x43imagePath = require('@/assets/images/x4.3plinko.png');
+          const x2imagePath = require('@/assets/images/x2.0plinko.png');
+          const x1imagePath = require('@/assets/images/x1.1plinko.png');
+          const x05imagePath = require('@/assets/images/x0.5plinko.png');
+          const x03imagePath = require('@/assets/images/x0.3plinko.png');
+          images.push(p5.loadImage(x38imagePath));
+          images.push(p5.loadImage(x12imagePath));
+          images.push(p5.loadImage(x43imagePath));
+          images.push(p5.loadImage(x2imagePath));
+          images.push(p5.loadImage(x1imagePath));
+          images.push(p5.loadImage(x05imagePath));
+          images.push(p5.loadImage(x03imagePath));
+          images.push(p5.loadImage(x05imagePath));
+          images.push(p5.loadImage(x1imagePath));
+          images.push(p5.loadImage(x2imagePath));
+          images.push(p5.loadImage(x43imagePath));
+          images.push(p5.loadImage(x12imagePath));
+          images.push(p5.loadImage(x38imagePath));
         };
 
         p5.setup = () => {

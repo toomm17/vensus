@@ -31,18 +31,16 @@
       Roulette</a
     > -->
     <router-link to="/" class="header-menu__item" @mouseover="mouseOverPlinko">
-      <the-header-nav-svg-icons
-        iconName="Plinko"
-      />
+      <the-header-nav-svg-icons iconName="Plinko" />
       Plinko
     </router-link>
-    <router-link to="/crash" class="header-menu__item">
+    <!-- <router-link to="/crash" class="header-menu__item">
       <the-header-nav-svg-icons
         iconName="Crash"
 
       />
       Crash</router-link
-    >
+    > -->
   </nav>
 </template>
 

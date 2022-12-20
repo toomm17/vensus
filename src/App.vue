@@ -1,12 +1,5 @@
 <template>
   <body :class="this.currentTheme">
-    <!-- <the-header @changeTheme="this.changeTheme" />
-    <div class="content">
-      <router-view />
-    </div>
-    <div class="footer-ghistory">
-      <div class="ghistory-container"></div>
-    </div> -->
     <router-view />
   </body>
 </template>

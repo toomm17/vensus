@@ -68,13 +68,13 @@
       </svg>
     </div>
     <div class="promocode-inputs">
-      <input type="text" v-model="letter1" class="input-l" maxlength="1" />
-      <input type="text" v-model="letter2" class="input-l" maxlength="1" />
-      <input type="text" v-model="letter3" class="input-l" maxlength="1" />
-      <input type="text" v-model="letter4" class="input-l" maxlength="1" />
-      <input type="text" v-model="letter5" class="input-l" maxlength="1" />
-      <input type="text" v-model="letter6" class="input-l" maxlength="1" />
-      <input type="text" v-model="letter7" class="input-l" maxlength="1" />
+      <input type="text" v-model="promocode1" class="input-l" id="input1" maxlength="1" />
+      <input type="text" v-model="promocode2" class="input-l" id="input2" maxlength="1" />
+      <input type="text" v-model="promocode3" class="input-l" id="input3" maxlength="1" />
+      <input type="text" v-model="promocode4" class="input-l" id="input4" maxlength="1" />
+      <input type="text" v-model="promocode5" class="input-l" id="input5" maxlength="1" />
+      <input type="text" v-model="promocode6" class="input-l" id="input6" maxlength="1" />
+      <input type="text" v-model="promocode7" class="input-l" id="input7" maxlength="1" />
     </div>
   </div>
   <div class="intro">
@@ -99,7 +99,7 @@ body {
   position: absolute;
   font-size: 95.0976px;
   line-height: 120px;
-  z-index: 1;
+  z-index: 100;
   width: 100%;
   height: 100%;
 }
@@ -140,16 +140,28 @@ export default {
 
   mounted() {
     const inputs = document.querySelectorAll('.input-l');
-    inputs.forEach((input) => {
+    inputs.forEach((input, index) => {
       input.addEventListener('focusin', (event) => {
         event.target.style.border = '6px solid #FFFFFF';
       });
+
       input.addEventListener('change', (event) => {
         event.target.style.border = '6px solid #FFFFFF';
       });
+
       input.addEventListener('focusout', (event) => {
         if (event.target.value == '') {
           event.target.style.border = '6px solid #272727';
+        }
+      });
+
+      input.addEventListener('input', (event) => {
+        if (event.target.value != '') {
+          const element = inputs[index + 1];
+          element.focus();
+        } else {
+          const element = inputs[index - 1];
+          element.focus();
         }
       });
     });
@@ -158,6 +170,33 @@ export default {
 
     video.addEventListener('ended', (event) => {
       video.remove();
+      const promo = document.querySelector('.promo');
+      promo.style.zIndex = '100';
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        const promocodeLetters = [
+          this.promocode1,
+          this.promocode2,
+          this.promocode3,
+          this.promocode4,
+          this.promocode5,
+          this.promocode6,
+          this.promocode7,
+        ];
+        let promocodeString = '';
+        promocodeLetters.forEach((promocodeLetter) => {
+          if (promocodeLetter) {
+            promocodeString += promocodeLetter;
+          }
+        });
+        console.log(promocodeString.trim() === '2341234', promocodeString);
+        if (promocodeString.trim() === '2341234') {
+          console.log('push');
+          this.$router.push('plinko');
+        }
+      }
     });
   },
 
@@ -173,6 +212,14 @@ export default {
             type: 'video/mov',
           },
         ],
+        promo: '2341234',
+        promocode1: '',
+        promocode2: '',
+        promocode3: '',
+        promocode4: '',
+        promocode5: '',
+        promocode6: '',
+        promocode7: '',
       },
     };
   },
