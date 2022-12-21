@@ -1,5 +1,3 @@
-import { toHandlers } from 'vue';
-
 export default class Phantom {
   constructor() {
     this.name = 'Phantom';
@@ -15,5 +13,10 @@ export default class Phantom {
       }
     }
   }
-  connectWallet() {}
 }
+
+Phantom.prototype.connectWallet = async function (provider, chain) {
+  provider.connect({ onlyIfTrasted: true }).then(({ publicKey }) => {
+    console.log(publicKey);
+  });
+};

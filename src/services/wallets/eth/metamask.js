@@ -1,4 +1,5 @@
 import { addressIsRegister } from '@/api/wallet';
+import detectEthereumProvider from '@metamask/detect-provider';
 
 export default class Metamask {
   constructor() {
@@ -18,12 +19,11 @@ export default class Metamask {
   }
 }
 
-Metamask.prototype.detectProvider = function () {
-  const provider = window.ethereum;
-  if (provider && provider.isMetaMask) {
+Metamask.prototype.detectProvider = async function () {
+  const provider = await detectEthereumProvider();
+  if (provider) {
+    console.log(provider);
     return provider;
-  } else {
-    return Metamask.downloadUrl;
   }
 };
 

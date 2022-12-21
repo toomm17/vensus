@@ -83,18 +83,6 @@
 </template>
 
 <style scoped>
-body {
-  color: white;
-  font-family: 'CeraPro';
-  background: linear-gradient(180deg, #1b1b1b 42.62%, #0e0e0e 100%);
-  background: -moz-linear-gradient(180deg, #1b1b1b 100%, #0e0e0e 100%);
-  background: -webkit-linear-gradient(#1b1b1b 42.62%, #0e0e0e 100%);
-}
-.intro {
-  max-height: 100vh;
-  overflow: hidden;
-}
-
 .promo {
   position: absolute;
   font-size: 95.0976px;
@@ -108,7 +96,7 @@ body {
   width: 231px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 239px;
+  padding-top: 175px;
 }
 
 .promocode-inputs {
@@ -208,7 +196,7 @@ export default {
         controls: true,
         sources: [
           {
-            src: '../../assets/video/vensus1080.mov',
+            src: '../../assets/video/vensus11.mov',
             type: 'video/mov',
           },
         ],

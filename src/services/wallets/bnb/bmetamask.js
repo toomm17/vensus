@@ -1,4 +1,5 @@
 import { addressIsRegister, createWallet } from '@/api/wallet';
+import detectEthereumProvider from '@metamask/detect-provider';
 
 export default class BnbMetamask {
   constructor() {
@@ -18,12 +19,10 @@ export default class BnbMetamask {
   }
 }
 
-BnbMetamask.prototype.detectProvider = function () {
-  const provider = window.ethereum;
-  if (provider && provider.isMetaMask) {
+BnbMetamask.prototype.detectProvider = async function () {
+  const provider = await detectEthereumProvider();
+  if (provider) {
     return provider;
-  } else {
-    return Metamask.downloadUrl;
   }
 };
 
@@ -70,7 +69,7 @@ BnbMetamask.prototype.connectWallet = async function (provider, chain) {
     await signWallet(provider, accountAddress, signMessage);
 
     const createdWallet = await createWallet(accountAddress, chain);
-    
+
     // JWT
     localStorage.setItem('pwu', createWallet.jwt);
   } else {

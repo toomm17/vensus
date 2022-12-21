@@ -32,7 +32,7 @@ export default {
       return false;
     },
     async clickToConnect(wallet) {
-      const provider = wallet.detectProvider();
+      const provider = await wallet.detectProvider();
       const connect = await wallet.connectWallet(provider, this.chainName);
       if (typeof connect == 'String') {
         console.log(connect);
